@@ -1,0 +1,114 @@
+write a c# program to compute N and Matrices. Allow user to determine the sizeof row and colmn
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace matrix
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+		
+	
+
+        Console.WriteLine("Enter the number of rows for the matrices:");
+        int rows = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter the number of columns for the matrices:");
+        int columns = Convert.ToInt32(Console.ReadLine());
+
+        int[,] matrix1 = new int[rows, columns];
+        int[,] matrix2 = new int[rows, columns];
+        int[,] sumMatrix = new int[rows, columns];
+
+        Console.WriteLine("Enter the elements of the first matrix:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("Enter element at position ({0}, {1}): ", i, j);
+                matrix1[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        Console.WriteLine("Enter the elements of the second matrix:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("Enter element at position ({0}, {1}): ", i, j);
+                matrix2[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                sumMatrix[i, j] = matrix1[i, j] + matrix2[i, j];
+            }
+        }
+
+        Console.WriteLine("The sum of the matrices is:");
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write(sumMatrix[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+			
+		}
+	}
+}
+
+write a program to sort 3 numbers in ascending order
+using system;
+
+namespace Ascending order
+{
+    class program
+    {
+    static void Main(string[]args)
+    {
+    Console.WriteLine("Enter three numbers");
+    Console.WriteLine("Number 1: ");
+    int snum1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Number 2:");
+    int snum2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Number 3: ");
+    int snum3 = int .Parse(Console.ReadLine());
+    
+    int [] numbers ={snum1,snum2,snum3};
+    Array.Sort(numbers);
+    Console.WriteLine("Nimbers in ascending order:");
+    foreach(int number in numbers){
+      Console.WriteLine(number);
+    }
+    console.ReadLine();
+    }
+  }
+}
+
+write a c# program to propmpt the user to input a string in uppercase 
+using System;
+
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+        
+        string uppercaseString = input.ToUpper();
+        
+        Console.WriteLine("The string in uppercase is: " + uppercaseString);
+    }
+}
